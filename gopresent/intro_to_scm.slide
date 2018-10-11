@@ -11,9 +11,19 @@ To be written...
 
 * GitHub
 
+.image img/Octocat.jpg 200 250
+
 GitHub is the most popular code hosting website.
 
+The source of the CodeUp Leeds website is hosted here alongside many, many more software projects.
+
 .link https://github.com github.com
+
+We'll be uploading our code to GitHub.
+
+* Creating a Repository
+
+You can download any public repository hosted on GitHub without an account, but you will need to create an account to upload your own.
 
 * Uploading Our Code to GitHub
 
@@ -25,3 +35,4 @@ And then _push_ it
 
     git push --set-upstream origin master
 
+: Exercise: sign up on GitHub, create a new repository, push local git repo
