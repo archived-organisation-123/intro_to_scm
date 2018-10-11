@@ -1,0 +1,27 @@
+Introduction to Source Control
+Hacktoberfest 2018 Edition
+18 Oct 2018
+
+Daniel Rollins & David Jimenez
+CodeUp Leeds
+
+* Why is Source Control Important?
+
+To be written...
+
+* GitHub
+
+GitHub is the most popular code hosting website.
+
+.link https://github.com github.com
+
+* Uploading Our Code to GitHub
+
+To make our code available to everyone, we need to point our local repository to GitHub
+
+    git remote add origin git@github.com:codeupleeds/intro_to_scm.git
+
+And then _push_ it
+
+    git push --set-upstream origin master
+
