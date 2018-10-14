@@ -9,30 +9,128 @@ CodeUp Leeds
 
 To be written...
 
+* Publishing Code
+
+A git repository that only we can work on is not very useful.
+
+We need to publish our repository somewhere on the Internet so others can download our software and make changes to it.
+
+But where?
+
 * GitHub
 
 .image img/Octocat.jpg 200 250
 
-GitHub is the most popular code hosting website.
+GitHub is the most popular, free code hosting platform.
 
-The source of the CodeUp Leeds website is hosted here alongside many, many more software projects.
+The CodeUp Leeds website is hosted here along with many other software projects.
 
 .link https://github.com github.com
 
-We'll be uploading our code to GitHub.
-
 * Creating a Repository
 
-You can download any public repository hosted on GitHub without an account, but you will need to create an account to upload your own.
+You can create unlimited, public git repositories on GitHub.
+
+- Create a GitHub account if you have not done so already.
+- Create a new repository
+
+.image img/CreateGithubRepo.png 380 600
 
 * Uploading Our Code to GitHub
 
-To make our code available to everyone, we need to point our local repository to GitHub
+Once we've created a repository on GitHub, we can point our local git repo to it by using its GitHub git address.
 
     git remote add origin git@github.com:codeupleeds/intro_to_scm.git
 
-And then _push_ it
+Then we can _push_ our code to it
 
     git push --set-upstream origin master
 
+* Cheatsheet
+
+Set origin
+
+    git remote add origin git@github.com:<repo_url>
+
+Set origin as our default push target
+
+    git push --set-upstream origin master
+
+From here on, we can simply write the following to publish our latest changes
+
+    git push
+
 : Exercise: sign up on GitHub, create a new repository, push local git repo
+
+* Contributing to existing software projects
+
+You can download git repositories uploaded by others to GitHub into your computer by cloning it.
+
+    git clone git@github.com:codeupleeds/codeupleeds.github.io.git
+
+.image img/GithubCloneDiagram.png
+
+* Forking
+
+On GitHub, you can fork any public repository to create a verbatim copy of it that you own and can freely change.
+
+If you want to incorporate your changes into the original project, you raise a pull request, which is a request to merge the changes you made in your fork into it.
+
+Configure git to to sync your fork with the original repository
+
+    git remote add upstream https://github.com/codeupleeds/codeupleeds.github.io.git
+
+: Merge pull request into CodeUp Leeds website.
+
+* Basic Workflow
+
+.image img/GithubFlowDiagram.png
+
+* Hacktoberfest 2018
+
+.image img/HacktoberfestLogo.png 200 250
+
+Annual celebration of open source.
+
+- Submit *5*pull*requests* between the *1st*and*31st*October* and win a free T-shirt!
+- Any public git repo is eligible to receive pull requests
+- Your pull request doesn't need to be accepted to be counted
+
+Register here to get started:
+
+.link https://hacktoberfest.digitalocean.com/
+
+* Adding your own page to the CodeUp Leeds website
+
+- Visit the CodeUp Leeds GitHub repo
+
+.link https://github.com/codeupleeds/codeupleeds.github.io
+
+- Fork the repository
+- Clone your fork
+- Add your own page: copy it from `template.html`
+- Commit your change and push it to your fork
+- Raise a pull request
+
+* Cheatsheet
+
+Clone your fork
+
+    git clone git@github.com/<yourusername>/codeupleeds.github.io
+
+Create your own page
+
+    cp template.html newpage.html
+
+Stage the new page
+
+    git add newpage.html
+
+Create commit
+
+    git commit -m "Add new page"
+
+Push your changes to your fork
+
+    git push -u origin HEAD
+
