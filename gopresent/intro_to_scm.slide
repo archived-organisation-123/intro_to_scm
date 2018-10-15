@@ -10,7 +10,7 @@ CodeUp Leeds
 As a project grows and becomes more complex we need some way to robustly handle:
 
 - Versioning
-- Change Rollback
+- Rolling back Changes
 - Collaboration
 - Back ups
 
@@ -38,6 +38,8 @@ There are many notable examples of Version Control Software however we are going
 * Let's explore Git
 
 * Cheatsheet 1
+
+Download Git & open your terminal
 
 Set name and email for commit messages
 
