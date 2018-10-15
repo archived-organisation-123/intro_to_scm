@@ -17,6 +17,8 @@ We need to publish our repository somewhere on the Internet so others can downlo
 
 But where?
 
+.image img/GitNoPush.png
+
 * GitHub
 
 .image img/Octocat.jpg 200 250
@@ -46,6 +48,8 @@ Then we can _push_ our code to it
 
     git push --set-upstream origin master
 
+.image img/GitPullPush.png 300 800
+
 * Cheatsheet
 
 Set origin
@@ -64,7 +68,7 @@ From here on, we can simply write the following to publish our latest changes
 
 * Contributing to existing software projects
 
-You can download git repositories uploaded by others to GitHub into your computer by cloning it.
+You can download git repositories uploaded by others to GitHub into your computer by cloning them.
 
     git clone git@github.com:codeupleeds/codeupleeds.github.io.git
 
@@ -76,9 +80,15 @@ On GitHub, you can fork any public repository to create a verbatim copy of it th
 
 If you want to incorporate your changes into the original project, you raise a pull request, which is a request to merge the changes you made in your fork into it.
 
-Configure git to to sync your fork with the original repository
+- Configure git to to sync your fork with the original repository
 
     git remote add upstream https://github.com/codeupleeds/codeupleeds.github.io.git
+
+- Push your changes up to your fork
+
+    git push
+
+- Raise a Pull Request on GitHub to let the original authors know you would like them to add your changes to the original repo (upstream)
 
 : Merge pull request into CodeUp Leeds website.
 
@@ -93,7 +103,7 @@ Configure git to to sync your fork with the original repository
 Annual celebration of open source.
 
 - Submit *5*pull*requests* between the *1st*and*31st*October* and win a free T-shirt!
-- Any public git repo is eligible to receive pull requests
+- Any public GitHub repo is eligible to receive pull requests
 - Your pull request doesn't need to be accepted to be counted
 
 Register here to get started:
