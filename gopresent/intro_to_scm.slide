@@ -5,9 +5,35 @@ Hacktoberfest 2018 Edition
 Daniel Rollins & David Jimenez
 CodeUp Leeds
 
-* Why is Source Control Important?
+* Why is Version Control Important?
 
-To be written...
+As a project grows and becomes more complex we need some way to robustly handle:
+
+- Versioning
+- Change Rollback
+- Collaboration
+- Back ups
+
+* Is this Version Control?
+
+.image img/not_source_control.png 500 _
+
+* What is Version Control Software
+
+.image img/git-logo.png
+
+Version Control Software (VCS) is a set of tools for managing changes to a set of files.
+
+It is used in many software projects to manage source code and is often called Source Code Management (SCM) or Revision Control
+
+There are many notable examples of Version Control Software however we are going to one of most popular in this workshop - Git.
+
+* Advangates of Version Control Software
+
+- Single source of truth
+- Highly granular change history
+- Easily view differences between versions
+- Tools to aid collaboration
 
 * Publishing Code
 
