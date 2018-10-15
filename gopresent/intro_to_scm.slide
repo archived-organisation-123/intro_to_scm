@@ -14,9 +14,17 @@ As a project grows and becomes more complex we need some way to robustly handle:
 - Collaboration
 - Back ups
 
+: Versioning: Knowing exactly what's in a particular release
+: Rolling Back Changes: Easily undo mistakes or uneeded changes
+: Collaboration: Most projects don't just have on person working on them
+: Back ups: You really don't want to lose your hard work.
+
 * Is this Version Control?
 
 .image img/not_source_control.png 500 _
+
+: Technically yes. But it's cumbersome and error prone.
+: Difficult to tell what differences there are between two versions.
 
 * What is Version Control Software
 
@@ -35,7 +43,23 @@ There are many notable examples of Version Control Software however we are going
 - Easily view differences between versions
 - Tools to aid collaboration
 
+: Show example of each in presentation repository
+: Just the one directory!
+: git log
+: git show
+: Explain the concept of branches but we're not going to cover them today.
+
 * Let's explore Git
+
+: Show config
+: Create a repository called hacktoberfest
+: Add a README.md with hello world
+: git diff
+: git add
+: git diff --staged
+: git commit (Explain how to write a good commit message)
+: git log
+: git show
 
 * Cheatsheet 1
 
