@@ -57,7 +57,21 @@ There are many notable examples of Version Control Software however we are going
 : git diff
 : git add
 : git diff --staged
-: git commit (Explain how to write a good commit message)
+: git commit (Explain how to write a good commit message. Next slide!)
+
+* Good commit messages
+
+- Keep commits to a single logical change.
+- 50 character subject in the imperative mood.
+- Think "When applied, this commit will..."
+- Elaborate on the change in a body after a blank line if needed.
+
+    Remove the speed limiter in time-travel mode
+
+    A plot device requires the DeLorean to travel at 88 mph in order to activate the Flux Capacitor.
+    The safety speed limiter is disabled when running in time-travel mode in order to fulfil the
+    director's vision. This does not affect cruising mode.
+
 : git log
 : git show
 
