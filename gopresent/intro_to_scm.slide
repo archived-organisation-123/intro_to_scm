@@ -35,6 +35,48 @@ There are many notable examples of Version Control Software however we are going
 - Easily view differences between versions
 - Tools to aid collaboration
 
+* Let's explore Git
+
+* Cheatsheet 1
+
+Set name and email for commit messages
+
+    git config --global user.name "Daniel J. Rollins"
+    git config --global user.email "daniel@djrollins.com"
+
+Create a new repository
+
+    mkdir hacktoberfest-2018
+    cd hacktoberfest-2018
+    git init
+
+Add a file and add some content
+
+   echo Hello World! > README.md
+
+* Cheatsheet 2
+
+View your changes
+
+    git diff
+
+Stage changes
+
+    git add README.md
+
+View the staged changes
+
+    git diff --staged
+
+Commit your changes
+
+    git commit
+
+View commit details
+
+    git log
+    git show
+
 * Publishing Code
 
 A git repository that only we can work on is not very useful.
