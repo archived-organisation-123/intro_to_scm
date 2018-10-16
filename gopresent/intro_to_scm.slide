@@ -5,9 +5,117 @@ Hacktoberfest 2018 Edition
 Daniel Rollins & David Jimenez
 CodeUp Leeds
 
-* Why is Source Control Important?
+* Why is Version Control Important?
 
-To be written...
+As a project grows and becomes more complex we need some way to robustly handle:
+
+- Versioning
+- Rolling back Changes
+- Collaboration
+- Back ups
+
+: Versioning: Knowing exactly what's in a particular release
+: Rolling Back Changes: Easily undo mistakes or uneeded changes
+: Collaboration: Most projects don't just have on person working on them
+: Back ups: You really don't want to lose your hard work.
+
+* Is this Version Control?
+
+.image img/not_source_control.png 500 _
+
+: Technically yes. But it's cumbersome and error prone.
+: Difficult to tell what differences there are between two versions.
+
+* What is Version Control Software
+
+.image img/git-logo.png
+
+Version Control Software (VCS) is a set of tools for managing changes to a set of files.
+
+It is used in many software projects to manage source code and is often called Source Code Management (SCM) or Revision Control
+
+There are many notable examples of Version Control Software however we are going to one of most popular in this workshop - Git.
+
+* Advangates of Version Control Software
+
+- Single source of truth
+- Highly granular change history
+- Easily view differences between versions
+- Tools to aid collaboration
+
+: Show example of each in presentation repository
+: Just the one directory!
+: git log
+: git show
+: Explain the concept of branches but we're not going to cover them today.
+
+* Let's explore Git
+
+: Show config
+: Create a repository called hacktoberfest
+: Add a README.md with hello world
+: git diff
+: git add
+: git diff --staged
+: git commit (Explain how to write a good commit message. Next slide!)
+
+* Good commit messages
+
+- Keep commits to a single logical change.
+- 50 character subject in the imperative mood.
+- Think "When applied, this commit will..."
+- Elaborate on the change in a body after a blank line if needed.
+
+    Remove the speed limiter in time-travel mode
+
+    A plot device requires the DeLorean to travel at 88 mph in order to activate the Flux Capacitor.
+    The safety speed limiter is disabled when running in time-travel mode in order to fulfil the
+    director's vision. This does not affect cruising mode.
+
+: git log
+: git show
+
+* Cheatsheet 1
+
+Download Git & open your terminal
+
+Set name and email for commit messages
+
+    git config --global user.name "Daniel J. Rollins"
+    git config --global user.email "daniel@djrollins.com"
+
+Create a new repository
+
+    mkdir hacktoberfest-2018
+    cd hacktoberfest-2018
+    git init
+
+Add a file and add some content
+
+   echo Hello World! > README.md
+
+* Cheatsheet 2
+
+View your changes
+
+    git diff
+
+Stage changes
+
+    git add README.md
+
+View the staged changes
+
+    git diff --staged
+
+Commit your changes
+
+    git commit
+
+View commit details
+
+    git log
+    git show
 
 * Publishing Code
 
