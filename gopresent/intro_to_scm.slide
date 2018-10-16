@@ -12,7 +12,7 @@ As a project grows and becomes more complex we need some way to robustly handle:
 - Versioning
 - Rolling back Changes
 - Collaboration
-- Back ups
+- Back-ups
 
 : Versioning: Knowing exactly what's in a particular release
 : Rolling Back Changes: Easily undo mistakes or uneeded changes
@@ -36,7 +36,7 @@ It is used in many software projects to manage source code and is often called S
 
 There are many notable examples of Version Control Software however we are going to one of most popular in this workshop - Git.
 
-* Advangates of Version Control Software
+* Advantages of Version Control Software
 
 - Single source of truth
 - Highly granular change history
@@ -56,6 +56,7 @@ There are many notable examples of Version Control Software however we are going
 : Add a README.md with hello world
 : git diff
 : git add
+: git status
 : git diff --staged
 : git commit (Explain how to write a good commit message. Next slide!)
 
@@ -104,9 +105,9 @@ Stage changes
 
     git add README.md
 
-View the staged changes
+Get an overview of your changes
 
-    git diff --staged
+    git status
 
 Commit your changes
 
@@ -127,13 +128,16 @@ But where?
 
 .image img/GitNoPush.png
 
+: Being able to version and back up our code is great, but VCS become much more useful when you use them as the means to collaborate with others.
+
 * GitHub
 
 .image img/Octocat.jpg 200 250
 
-GitHub is the most popular, free code hosting platform.
+GitHub is the most popular, free code hosting platform. It allows you to
 
-The CodeUp Leeds website is hosted here along with many other software projects.
+- Browse through millions of software repositories that other people have made, including big companies like Google or Microsoft or the CodeUp Leeds website
+- Upload your own code to share it with others so they can use it and help you improve it
 
 .link https://github.com github.com
 
@@ -141,16 +145,15 @@ The CodeUp Leeds website is hosted here along with many other software projects.
 
 You can create unlimited, public git repositories on GitHub.
 
-- Create a GitHub account if you have not done so already.
-- Create a new repository
+You don't need an account to download code made by others, but you will need to to upload your own.
 
 .image img/CreateGithubRepo.png 380 600
 
 * Uploading Our Code to GitHub
 
-Once we've created a repository on GitHub, we can point our local git repo to it by using its GitHub git address.
+Once we've created a repository on GitHub, we can point our local git repo to it by using its GitHub address.
 
-    git remote add origin git@github.com:codeupleeds/intro_to_scm.git
+    git remote add origin https://github.com/codeupleeds/intro_to_scm.git
 
 Then we can _push_ our code to it
 
@@ -158,13 +161,17 @@ Then we can _push_ our code to it
 
 .image img/GitPullPush.png 300 800
 
+: The --set-upstream origin master flag sets the remote repository as the default one when doing an argument-less push.
+
 * Cheatsheet
+
+Create a new repo on GitHub. Make sure you leave all in the defaults (except the name!)
 
 Set origin
 
-    git remote add origin git@github.com:<repo_url>
+    git remote add origin https://github.com/<repo_url>
 
-Set origin as our default push target
+Set origin as our default push target and do a first push onto it
 
     git push --set-upstream origin master
 
@@ -172,15 +179,23 @@ From here on, we can simply write the following to publish our latest changes
 
     git push
 
-: Exercise: sign up on GitHub, create a new repository, push local git repo
+: Exercise: sign up on GitHub, create a new repository (don't initialise it), push local git repo
 
 * Contributing to existing software projects
 
 You can download git repositories uploaded by others to GitHub into your computer by cloning them.
 
-    git clone git@github.com:codeupleeds/codeupleeds.github.io.git
+    git clone https://github.com/codeupleeds/codeupleeds.github.io.git
 
 .image img/GithubCloneDiagram.png
+
+* Pulling
+
+Once you've cloned a repo into a git repository in your computer, you can update your local repo to keep it in sync with the original on GitHub by pulling from it.
+
+    git pull
+
+: Cloning is only ever needed once when downloading a new repo for the first time. 
 
 * Forking
 
@@ -198,6 +213,7 @@ If you want to incorporate your changes into the original project, you raise a p
 
 - Raise a Pull Request on GitHub to let the original authors know you would like them to add your changes to the original repo (upstream)
 
+: Pull requests, aka merge requests, are notifications you send to the owners of a repository you forked to ask them to include a change you made in your own fork 
 : Merge pull request into CodeUp Leeds website.
 
 * Basic Workflow
@@ -208,7 +224,7 @@ If you want to incorporate your changes into the original project, you raise a p
 
 .image img/HacktoberfestLogo.png 200 250
 
-Annual celebration of open source.
+The annual celebration of open source.
 
 - Submit *5*pull*requests* between the *1st*and*31st*October* and win a free T-shirt!
 - Any public GitHub repo is eligible to receive pull requests
@@ -234,7 +250,7 @@ Register here to get started:
 
 Clone your fork
 
-    git clone git@github.com/<yourusername>/codeupleeds.github.io
+    git clone https://github.com/<yourusername>/codeupleeds.github.io.git
 
 Create your own page
 
@@ -252,3 +268,9 @@ Push your changes to your fork
 
     git push -u origin HEAD
 
+* Let us know how we did
+
+- Please fill in one of the survey forms that will be handed out to you
+- Or scan the QR code below to do it online
+
+.image img/SurveyQR.png
