@@ -12,4 +12,4 @@ handlers:
 # nobuild_files is a regexp that identifies which files to not build.  It
 # is useful for embedding static assets like code snippets and preventing
 # them from producing build errors for your project.
-nobuild_files: [path regexp for talk materials]
+nobuild_files: content/
